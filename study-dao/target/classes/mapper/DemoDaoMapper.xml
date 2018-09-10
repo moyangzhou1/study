@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.myz.study.dao.DemoDao">
+
+
+    <select id="getUserList" resultType="com.myz.study.domain.UserDto">
+        select  id,
+            emp_id empId,
+            user_name userName,
+            account,
+            `password`,
+            user_type userType,
+            mobile,
+            email,
+            head_img headImg,
+            `status`,
+            dealer_id dealerId  from erp_user;
+    </select>
+    <select id="getUserList1" resultType="com.myz.study.domain.UserDto1">
+          SELECT
+            id,
+            emp_id empId,
+            user_name userName,
+            account,
+            `password`,
+            user_type userType,
+            mobile,
+            email,
+            head_img headImg,
+            `status`,
+            dealer_id dealerId
+            FROM
+            erp_user;
+    </select>
+</mapper>

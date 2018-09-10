@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>study</artifactId>
+        <groupId>com.myz</groupId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>study-server</artifactId>
+    <packaging>jar</packaging>
+    <name>study-server</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.myz</groupId>
+            <artifactId>study-service</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.myz</groupId>
+            <artifactId>study-domain</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+
+<!--配置Profiles环境切换-->
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <properties>
+                <activityYml>
+                    dev
+                </activityYml>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+    </profiles>
+
+</project>
